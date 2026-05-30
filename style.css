@@ -50,6 +50,7 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: var(--space-xs);
 }
 header {
   background-color: var(--header-bg);
@@ -190,6 +191,7 @@ header ul {
   display: flex;
   padding-block: var(--space-xxl);
   width: 100%;
+  gap: var(--space-lg);
   overflow-x: scroll;
   align-items: baseline;
 }
@@ -198,7 +200,7 @@ header ul {
   min-width: 300px;
   border-radius: var(--radius-md);
   overflow: hidden;
-  margin: var(--space-sm) var(--space-lg);
+  margin-inline: var(--space-sm);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.144);
 }
 .card-content {
@@ -280,6 +282,6 @@ header ul {
     padding: var(--space-md) var(--space-lg);
   }
   #pdfs {
-    padding: var(--space-md);
+    padding: var(--space-md) 0;
   }
 }
