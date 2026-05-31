@@ -210,7 +210,7 @@ header ul {
 }
 .card {
   background-color: var(---bg-card);
-  min-width: 300px;
+  min-width: 280px;
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-inline: var(--space-sm);
@@ -365,7 +365,7 @@ header ul {
     transition: var(--transition);
   }
   ul li a {
-    border-top: 1px solid var(--accent);
+    border-top: 1px solid var(--text-muted);
   }
   #menu-toggle:checked ~ ul {
     top: 100px;
@@ -387,4 +387,6 @@ header ul {
   #pdfs {
     padding: var(--space-md) 0;
   }
+  .product-grid{
+    gap: var(--space-sm);}
 }
