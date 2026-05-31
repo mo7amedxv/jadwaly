@@ -1,21 +1,21 @@
 const whatsappNumber = "201024165262";
 const pdfs = [
   {
-    img: "imgs/pdf1.jpeg",
+    img: "imgs/no-img.jpg",
     name: "خطة النشاط الصيفي الترفيهيه",
-    desc: "الخطه الترفيهية التعليمية من مايو الي اغسطس",
+    desc: "الخطه الترفيهية التعليمية",
     price: 100,
   },
 
   {
-    img: "imgs/pdf2.jfif",
+    img: "imgs/no-img.jpg",
     name: "الملفات الادارية للحضانة",
     desc: "جدول أسبوعي عملي اليومية",
     price: 90,
   },
 
   {
-    img: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=400&q=80",
+    img: "imgs/no-img.jpg",
     name: "دليل ركن التعايش والقراءة",
     desc: "جدول أسبوعي عملي جاهز للطباعة",
     price: 150,
@@ -24,14 +24,19 @@ const pdfs = [
 
 const courses = [
   {
-    img: "imgs/pdf1.jpeg",
-    name: "خطة النشاط الصيفي الترفيهيه من مايو الي اغسطس",
-    desc: "الخطه الصيفية الترفيهية والخطة الصيفية التعليمية من مايو الي اغسطس",
+    img: "imgs/no-img.jpg",
+    name: "خطة النشاط الصيفي اغسطس",
+    desc: "الخطه الصيفية ",
     price: 100,
   },
-
   {
-    img: "imgs/pdf2.jfif",
+    img: "imgs/no-img.jpg",
+    name: "خطة النشاط الصيفي اغسطس",
+    desc: "الخطه الصيفية ",
+    price: 100,
+  },
+  {
+    img: "imgs/no-img.jpg",
     name: "الملفات الادارية للحضانة",
     desc: "جدول أسبوعي عملي اليومية",
     price: 90,

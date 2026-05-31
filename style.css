@@ -2,7 +2,8 @@
   --primary-red: #9b2c2c;
   --primary-hover: #c53030;
   --accent-blue: #1a365d;
-  --bg-color: #f7fafc;
+  --bg-color: #ffffff;
+  --section-bg: #f8f8f8;
   --card-bg: #ffffff;
   --text-main: #2d3748;
   --text-muted: #718096;
@@ -109,7 +110,8 @@ header ul {
   height: 100%;
   position: absolute;
   content: "";
-  backdrop-filter: brightness(90%) blur(1px);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1px);
 }
 .hero-subtitle,
 .hero h1,
@@ -119,12 +121,14 @@ header ul {
   display: block;
 }
 .hero-subtitle {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.154);
   color: var(--text-main);
-  filter: invert();
+  color: #ddd;
   font-weight: var(--fw-sm);
   font-size: var(--fs-lg);
 }
 .hero h1 {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.154);
   color: var(--card-bg);
   font-size: var(--fs-hero);
   font-weight: var(--fw-lg) !important;
@@ -140,6 +144,7 @@ header ul {
   border-radius: var(--radius-lg);
   justify-self: center;
   transition: var(--main-transition);
+  font-weight: var(--fw-lg);
 }
 .btn-primary:hover {
   background-color: var(--primary-hover);
@@ -207,6 +212,7 @@ header ul {
   margin-inline: var(--space-sm);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.144);
 }
+
 .card-content {
   padding: var(--space-md);
 }
@@ -319,6 +325,13 @@ header ul {
 .testimonials-grid .card:nth-of-type(2) .profile-photo {
   background: #e6f1fb;
   color: #185fa5;
+}
+#pdfs,
+.testimonials {
+  background: var(--section-bg);
+}
+#pdfs,.testimonials,#courses{
+  padding-block: var(--space-xl);
 }
 @media (max-width: 768px) {
   header {
