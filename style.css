@@ -1,29 +1,31 @@
 :root {
-  --primary-red: #9b2c2c;
-  --primary-hover: #c53030;
-  --accent-blue: #1a365d;
-  --bg-color: #ffffff;
-  --section-bg: #f8f8f8;
-  --card-bg: #ffffff;
-  --text-main: #2d3748;
+  --primary: #0f6e56;
+  --primary-hover: #1d9e75;
+  --primary-light: #eeffff;
+  --accent: #fac775;
+  --bg: #ffffff;
+  --bg-section: #f8f8f8;
+  --bg-card: #ffffff;
+  --text: #2d3748;
   --text-muted: #718096;
-  --whatsapp-green: #25d366;
-  --header-bg: #ffffff22;
-  --main-fs: "Cairo", sans-serif;
-  --main-transition: 0.3s;
-  --fw-sm: 500;
-  --fw-md: 600;
-  --fw-lg: 700;
+  --whatsapp: #25d366;
+  --whatsapp-hover: #1ebe5d;
+  --header-bg: rgba(255, 255, 255, 0.15);
+  --font: "IBM Plex Sans Arabic", sans-serif;
+  --transition: 0.3s;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
-  --space-lg: 1.3rem;
+  --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-xxl: 4rem;
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 30px;
-  --fs-xs: 0.875rem;
+  --fs-xs: 0.9rem;
   --fs-sm: 1rem;
   --fs-md: 1.1rem;
   --fs-lg: 1.25rem;
@@ -45,11 +47,11 @@ img {
   max-width: 100%;
 }
 body {
-  font-family: var(--main-fs);
+  font-family: var(--font);
   background-color: var(--bg-color);
   direction: rtl;
-  line-height: 2.1;
-  color: var(--text-main);
+  line-height: 1.8;
+  color: var(--text);
 }
 
 .container {
@@ -65,13 +67,13 @@ a {
   text-decoration: none;
 }
 header a {
-  font-weight: var(--fs-md);
+  font-weight: var(--fw-medium);
   font-size: var(--fs-lg);
   height: 100%;
   padding: var(--space-md);
   display: block;
-  color: var(--accent-blue);
-  transition: var(--main-transition);
+  color: var(--text);
+  transition: var(--transition);
 }
 header .logo {
   padding: 0;
@@ -81,7 +83,7 @@ header .logo img {
   padding: var(--space-md);
 }
 header a:not(.logo):hover {
-  color: var(--primary-red);
+  color: var(--primary);
 }
 
 header .container {
@@ -122,29 +124,31 @@ header ul {
 }
 .hero-subtitle {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.154);
-  color: var(--text-main);
+  color: var(--text);
   color: #ddd;
-  font-weight: var(--fw-sm);
+  font-weight: var(--fw-regular);
   font-size: var(--fs-lg);
+  margin-bottom: var(--space-xl);
 }
 .hero h1 {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.154);
-  color: var(--card-bg);
+  color: var(--primary-light);
   font-size: var(--fs-hero);
-  font-weight: var(--fw-lg) !important;
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-md);
 }
 .highlight {
-  color: var(--primary-red);
+  color: var(--primary);
 }
 .btn-primary {
-  background-color: var(--primary-red);
+  background-color: var(--primary);
   padding: var(--space-lg) var(--space-xxl);
   font-size: var(--fs-lg);
   margin: var(--space-md);
   border-radius: var(--radius-lg);
   justify-self: center;
-  transition: var(--main-transition);
-  font-weight: var(--fw-lg);
+  transition: var(--transition);
+  font-weight: var(--fw-bold);
 }
 .btn-primary:hover {
   background-color: var(--primary-hover);
@@ -159,8 +163,8 @@ header ul {
 .menu-btn span {
   width: 100%;
   height: 3px;
-  background-color: var(--text-main);
-  transition: var(--main-transition);
+  background-color: var(--text);
+  transition: var(--transition);
 }
 #menu-toggle:checked ~ .menu-btn span:nth-child(1) {
   transform: rotate(-45deg) translate(-10px, 10px);
@@ -185,7 +189,7 @@ header ul {
 }
 .section-title:before {
   content: "";
-  background-color: var(--primary-red);
+  background-color: var(--primary);
   width: 90%;
   height: 3px;
   position: absolute;
@@ -205,7 +209,7 @@ header ul {
   align-items: baseline;
 }
 .card {
-  background-color: var(--card-bg);
+  background-color: var(---bg-card);
   min-width: 350px;
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -233,15 +237,15 @@ header ul {
 .buy-btn {
   display: block;
   text-align: center;
-  background-color: var(--primary-red);
-  color: var(--bg-color);
+  background-color: var(--primary);
+  color: var(--primary-light);
   padding: var(--space-sm);
   border-radius: var(--radius-md);
   font-size: var(--fs-sm);
-  transition: var(--main-transition);
+  transition: var(--transition);
 }
 .price {
-  color: var(--accent-blue);
+  color: var(--primary);
   font-size: var(--fs-lg);
   line-height: 2;
 }
@@ -262,21 +266,22 @@ header ul {
 }
 .testimonials-grid .card {
   border-radius: var(--radius-md);
-  transition: var(--main-transition);
+  transition: var(--transition);
   padding: var(--space-lg);
   min-width: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: var(--bg-card);
 }
 .testimonials-grid .card .desc {
   margin-top: var(--space-md);
-  color: var(--text-main);
+  color: var(--text);
   flex: 1;
 }
 .rating {
   font-size: var(--fs-xl);
-  color: var(--accent-blue);
+  color: var(--accent);
 }
 .testimonials-grid .card:hover {
   transform: translateY(-5px);
@@ -288,7 +293,7 @@ header ul {
 
 .card .user {
   line-height: 1.2;
-  font-weight: var(--fw-md);
+  font-weight: var(--fw-medium);
   font-size: var(--fs-lg);
 }
 
@@ -328,9 +333,11 @@ header ul {
 }
 #pdfs,
 .testimonials {
-  background: var(--section-bg);
+  background: var(--bg-section);
 }
-#pdfs,.testimonials,#courses{
+#pdfs,
+.testimonials,
+#courses {
   padding-block: var(--space-xl);
 }
 @media (max-width: 768px) {
@@ -351,10 +358,10 @@ header ul {
     right: 0;
     visibility: hidden;
     opacity: 0;
-    transition: var(--main-transition);
+    transition: var(--transition);
   }
   ul li a {
-    border-top: 1px solid var(--accent-blue);
+    border-top: 1px solid var(--accent);
   }
   #menu-toggle:checked ~ ul {
     top: 100px;
