@@ -48,6 +48,7 @@ body {
   background-color: var(--bg-color);
   direction: rtl;
   line-height: 2.1;
+  color: var(--text-main);
 }
 
 .container {
@@ -249,6 +250,75 @@ header ul {
   grid-template-columns: repeat(auto-fit, minmax(280px, 370px));
   gap: var(--space-lg);
   padding-block: var(--space-xxl);
+  place-items: center;
+  place-content: center;
+  align-items: stretch;
+}
+.testimonials-grid .card {
+  border-radius: var(--radius-md);
+  transition: var(--main-transition);
+  padding: var(--space-lg);
+  min-width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonials-grid .card .desc {
+  margin-top: var(--space-md);
+  color: var(--text-main);
+  flex: 1;
+}
+.rating {
+  font-size: var(--fs-xl);
+  color: var(--accent-blue);
+}
+.testimonials-grid .card:hover {
+  transform: translateY(-5px);
+}
+.fa-whatsapp {
+  color: #25d366;
+  font-size: var(--fs-lg);
+}
+
+.card .user {
+  line-height: 1.2;
+  font-weight: var(--fw-md);
+  font-size: var(--fs-lg);
+}
+
+.source {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+.card .profile-photo {
+  background-color: #e1f5ee;
+  color: #0f6e56;
+  width: 70px;
+  height: 70px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--fs-lg);
+}
+.testimonials-grid .card:nth-of-type(1) .profile-photo {
+  background-color: #faece7;
+  color: #993c1d;
+}
+.testimonials-grid .card:nth-of-type(2) .profile-photo {
+  background: #e6f1fb;
+  color: #185fa5;
 }
 @media (max-width: 768px) {
   header {
