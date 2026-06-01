@@ -7,7 +7,7 @@
   --bg-section: #f8f8f8;
   --bg-card: #ffffff;
   --text: #2d3748;
-  --text-muted: #718096;
+  --text-muted: #4a5568;
   --whatsapp: #25d366;
   --whatsapp-hover: #1ebe5d;
   --header-bg: rgba(255, 255, 255, 0.15);
@@ -16,6 +16,7 @@
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
+  --space-xxs: 0.1rem;
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -39,6 +40,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -77,6 +79,7 @@ header a {
 }
 header .logo {
   padding: 0;
+  aspect-ratio: 142.41 / 100;
 }
 header .logo img {
   height: 100px;
@@ -158,16 +161,17 @@ header ul {
   flex-direction: column;
   width: 30px;
   height: 25px;
-  gap: 30%;
+  justify-content: space-between;
 }
 .menu-btn span {
   width: 100%;
-  height: 3px;
+  height: 5px;
   background-color: var(--text);
   transition: var(--transition);
+  border-radius: var(--radius-md);
 }
 #menu-toggle:checked ~ .menu-btn span:nth-child(1) {
-  transform: rotate(-45deg) translate(-10px, 10px);
+  transform: rotate(-45deg) translate(-8px, 10px);
 }
 
 #menu-toggle:checked ~ .menu-btn span:nth-child(2) {
@@ -206,19 +210,25 @@ header ul {
   width: 100%;
   gap: var(--space-lg);
   overflow-x: scroll;
-  align-items: baseline;
+  align-items: stretch;
 }
 .card {
   background-color: var(---bg-card);
-  min-width: 280px;
-  border-radius: var(--radius-md);
+  min-width: 300px;
+  border-radius: var(--radius-sm);
   overflow: hidden;
+  flex: 1;
   margin-inline: var(--space-sm);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.144);
+  display: flex;
+  flex-direction: column;
 }
 
 .card-content {
   padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .card-content h3 {
   font-weight: var(--fw-medium);
@@ -234,8 +244,31 @@ header ul {
 }
 .card img {
   width: 100%;
-  height: 250px;
   object-fit: cover;
+  height: 250px;
+  position: relative;
+}
+
+.card img:after {
+  content: "⚠️ عذراً، لم يتم تحميل صورة " attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-card);
+  color: var(--text);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  padding: var(--space-sm);
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px dashed var(--text-muted);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  overflow: hidden;
 }
 .buy-btn {
   display: block;
@@ -246,6 +279,7 @@ header ul {
   border-radius: var(--radius-md);
   font-size: var(--fs-sm);
   transition: var(--transition);
+  font-weight: var(--fw-medium);
 }
 .price {
   color: var(--primary);
@@ -344,6 +378,29 @@ header ul {
 #courses {
   padding-block: var(--space-xl);
 }
+.scroll-indicator-wrap {
+  padding-inline: var(--space-sm);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.scroll-track {
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.scroll-thumb {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: var(--radius-sm);
+  transition: margin-right 0.08s ease;
+  margin-right: 0;
+}
+.card-footer {
+  margin-top: auto;
+}
 @media (max-width: 768px) {
   header {
     background-color: #fff;
@@ -387,6 +444,36 @@ header ul {
   #pdfs {
     padding: var(--space-md) 0;
   }
-  .product-grid{
-    gap: var(--space-sm);}
+  .product-grid {
+    gap: var(--space-sm);
+  }
+
+  .card-content h3 {
+    font-size: var(--fs-md);
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    min-width: 270px;
+  }
+  .card img {
+    height: 200px;
+  }
+  .price {
+    font-size: var(--fs-md);
+  }
+  .card-content {
+    padding: var(--space-sm);
+  }
+  .card .desc {
+    font-size: var(--fs-xs);
+
+    font-weight: var(--fw-medium);
+  }
+  .buy-btn {
+    font-size: var(--fs-sm);
+  }
+  .card-content h3 {
+    font-weight: var(--fw-medium);
+  }
 }
