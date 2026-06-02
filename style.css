@@ -149,7 +149,7 @@ header ul {
   margin-bottom: var(--space-md);
 }
 .highlight {
-  color: #15aa85;
+  color:var(--primary-hover);
 }
 .btn-primary {
   background-color: var(--primary);
