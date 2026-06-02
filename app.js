@@ -76,54 +76,54 @@ renderCards(pdfs, "pdf-grid", "PDF");
 renderCards(courses, "courses-grid", "Course");
 
 function initGrid(grid) {
-  const wrap = document.createElement("div");
-  wrap.className = "scroll-indicator-wrap";
-  wrap.innerHTML =
-    '<div class="scroll-track"><div class="scroll-thumb"></div></div>';
+  const wrap = document.createElement('div');
+  wrap.className = 'scroll-indicator-wrap';
+  wrap.innerHTML = '<div class="scroll-track"><div class="scroll-thumb"></div></div>';
   grid.after(wrap);
 
-  const track = wrap.querySelector(".scroll-track");
-  const thumb = wrap.querySelector(".scroll-thumb");
+  const track = wrap.querySelector('.scroll-track');
+  const thumb = wrap.querySelector('.scroll-thumb');
 
   function updateThumb() {
     const max = grid.scrollWidth - grid.clientWidth;
     const pct = max > 0 ? Math.abs(grid.scrollLeft) / max : 0;
     const tw = (grid.clientWidth / grid.scrollWidth) * 100;
-    thumb.style.width = tw.toFixed(1) + "%";
-    thumb.style.marginRight = (pct * (100 - tw)).toFixed(2) + "%";
+    thumb.style.width = tw.toFixed(1) + '%';
+    thumb.style.marginRight = (pct * (100 - tw)).toFixed(2) + '%';
   }
 
-  grid.addEventListener("scroll", updateThumb, { passive: true });
-  window.addEventListener("resize", updateThumb, { passive: true });
+  grid.addEventListener('scroll', updateThumb, { passive: true });
+  window.addEventListener('resize', updateThumb, { passive: true });
   updateThumb();
 
   let isDragging = false;
   let startX = 0;
   let startScroll = 0;
 
-  thumb.style.cursor = "grab";
+  thumb.style.cursor = 'grab';
 
-  thumb.addEventListener("mousedown", (e) => {
+  thumb.addEventListener('mousedown', (e) => {
     isDragging = true;
     startX = e.pageX;
     startScroll = grid.scrollLeft;
-    thumb.style.cursor = "grabbing";
-    thumb.style.transition = "none";
+    thumb.style.cursor = 'grabbing';
+    thumb.style.transition = 'none'; 
     e.preventDefault();
   });
 
-  document.addEventListener("mousemove", (e) => {
+  document.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
     const delta = e.pageX - startX;
     const scrollRatio = grid.scrollWidth / track.clientWidth;
-    grid.scrollLeft = startScroll + delta * scrollRatio;
+    grid.scrollLeft = startScroll + (delta * scrollRatio);
   });
 
-  document.addEventListener("mouseup", () => {
+  document.addEventListener('mouseup', () => {
     if (!isDragging) return;
     isDragging = false;
-    thumb.style.cursor = "grab";
-    thumb.style.transition = "";
+    thumb.style.cursor = 'grab';
+    thumb.style.transition = ''; 
   });
 }
-document.querySelectorAll(".product-grid").forEach(initGrid);
+
+document.querySelectorAll('.product-grid').forEach(initGrid);
