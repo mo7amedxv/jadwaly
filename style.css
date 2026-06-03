@@ -177,7 +177,7 @@ header ul {
 .menu-btn {
   display: none;
   flex-direction: column;
-  width: 30px;
+  width: 35px;
   height: 25px;
   justify-content: space-between;
 }
