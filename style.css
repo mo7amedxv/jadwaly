@@ -12,7 +12,7 @@
   --whatsapp: #25d366;
   --whatsapp-hover: #1ebe5d;
   --header-bg: rgba(255, 255, 255, 0.15);
-  --font: "IBM Plex Sans Arabic", sans-serif;
+  --font: "cairo", sans-serif;
   --transition: 0.3s;
   --fw-regular: 400;
   --fw-medium: 500;
@@ -653,9 +653,6 @@ footer ul {
   }
   .card img {
     height: 200px;
-  }
-  .price {
-    font-size: var(--fs-md);
   }
   .card-content {
     padding: var(--space-sm);
