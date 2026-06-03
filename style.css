@@ -114,7 +114,7 @@ header ul {
   text-align: center;
   align-items: center;
   justify-content: center;
-  background: url("imgs/hero.png") no-repeat center/cover;
+  background: url("imgs/hero.webp") no-repeat center/cover;
   height: calc(85vh - 100px);
   position: relative;
 }
@@ -216,7 +216,7 @@ header ul {
 }
 .card {
   background-color: var(---bg-card);
-  min-width: 300px;
+  min-width: 280px;
   border-radius: var(--radius-sm);
   overflow: hidden;
   flex: 1;
@@ -251,7 +251,7 @@ header ul {
 .card img {
   width: 100%;
   object-fit: cover;
-  height: 250px;
+  height: 200px;
   position: relative;
 }
 
@@ -282,14 +282,14 @@ header ul {
   background-color: var(--primary);
   color: var(--primary-light);
   padding: var(--space-sm);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   font-size: var(--fs-sm);
   transition: var(--transition);
   font-weight: var(--fw-medium);
 }
 .price {
   color: var(--primary);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   line-height: 2;
   font-weight: var(--fw-medium);
 }
@@ -323,6 +323,9 @@ header ul {
   color: var(--text);
   flex: 1;
 }
+/* .card-content .desc{ */
+/* display: none; */
+/* } */
 .rating {
   font-size: var(--fs-xl);
   color: var(--accent);
@@ -541,7 +544,7 @@ footer ul {
   color: #ccc;
 }
 .footer-item ul a:hover {
-  color: var(--primary-light);
+  color: var(--primary-hover);
 }
 .footer-links:nth-last-of-type(1) {
   display: flex;
@@ -583,7 +586,7 @@ footer ul {
   color: var(--primary-light);
 }
 @media (max-width: 768px) {
-  .cta-heading{
+  .cta-heading {
     font-size: var(--fs-xl);
   }
   header {
@@ -640,7 +643,7 @@ footer ul {
   .header-cta {
     display: none;
   }
-  .footer-grid{
+  .footer-grid {
     gap: var(--space-xxl);
   }
 }
@@ -670,5 +673,5 @@ footer ul {
   }
 }
 button {
-  width: fit-content !important;
+  width: fit-content;
 }
