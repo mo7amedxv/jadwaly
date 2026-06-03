@@ -94,13 +94,11 @@ header a {
 }
 
 header .logo {
-  padding: 0;
-  aspect-ratio: 142.41 / 100;
+  padding: var(--space-sm);
 }
 
 header .logo img {
-  height: 100px;
-  padding: var(--space-md);
+  height: 80px;
 }
 
 header a:not(.logo, .header-cta):hover {
