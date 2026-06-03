@@ -140,7 +140,7 @@ function renderCards(itemsArray, containerId, itemTypeLabel) {
           <h3>${item.name}</h3>
           <p  class="desc">${item.desc}</p>
         <div class="card-footer">
-          <p class="price">${item.price}EGP</p>
+          <p class="price">${item.price} <span class="currency">ج.م</span></p>
           <a href="${whatsappUrl}" target="_blank" class="buy-btn">شراء عبر واتساب</a>
         </div>
         </div>
