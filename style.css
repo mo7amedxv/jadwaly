@@ -27,14 +27,14 @@
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 9999px;
-  --fs-xs: 0.75rem;
-  --fs-sm: 0.875rem;
-  --fs-md: 1rem;
-  --fs-lg: 1.125rem;
-  --fs-xl: 1.4rem;
-  --fs-xxl: 1.75rem;
-  --fs-title: 2.25rem;
-  --fs-hero: 3.5rem;
+  --fs-xs: clamp(0.65rem, 0.6rem + 0.2vw, 0.75rem);
+  --fs-sm: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --fs-md: clamp(0.85rem, 0.8rem + 0.3vw, 1rem);
+  --fs-lg: clamp(0.95rem, 0.9rem + 0.4vw, 1.125rem);
+  --fs-xl: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
+  --fs-xxl: clamp(1.3rem, 1.2rem + 0.6vw, 1.75rem);
+  --fs-title: clamp(1.6rem, 1.4rem + 0.8vw, 2.25rem);
+  --fs-hero: clamp(2rem, 1.8rem + 1vw, 4rem);
   --lh-tight: 1.3;
   --lh-body: 1.65;
 }
@@ -122,7 +122,6 @@ header ul {
 
 .hero {
   display: flex;
-  text-align: center;
   align-items: center;
   justify-content: center;
   background-color: var(--bg-section);
@@ -130,10 +129,15 @@ header ul {
     linear-gradient(#e5e7eb 1px, transparent 1px),
     linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
   background-size: 40px 40px;
-  height: calc(85vh - 92px);
+  min-height: 500px;
   position: relative;
 }
-
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  place-items: center;
+  place-content: center;
+}
 .hero-subtitle,
 .hero h1,
 .btn-primary {
@@ -144,7 +148,7 @@ header ul {
 .hero-subtitle {
   color: var(--text-muted);
   font-weight: var(--fw-regular);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-md);
   margin-bottom: var(--space-xl);
 }
 
@@ -162,12 +166,16 @@ header ul {
 
 .btn-primary {
   background-color: var(--primary);
-  padding: var(--space-lg) var(--space-xxl);
-  font-size: var(--fs-xl);
-  margin: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+  font-size: var(--fs-lg);
   justify-self: center;
   transition: var(--transition);
   font-weight: var(--fw-bold);
+}
+@media (min-width: 769px) and (max-width: 900px) {
+  .hero-img-wrapper {
+    width: 320px;
+  }
 }
 
 .btn-primary:hover {
@@ -496,7 +504,7 @@ header ul {
 
 @media (min-width: 847px) {
   .stat-item:not(:last-of-type) {
-    border-left: 1px solid var(--text-muted);
+    border-left: 1px solid #e5e7eb;
   }
 }
 
@@ -656,14 +664,16 @@ footer ul {
   .testimonials-grid {
     padding-block: var(--space-md);
   }
-  .cta-heading {
-    font-size: var(--fs-xl);
+  .hero-content {
+    grid-template-columns: 1fr;
   }
-
+  .hero-text {
+    padding-top: var(--space-md);
+    text-align: center;
+  }
   header {
     background-color: var(--bg);
   }
-
   header .container {
     padding-inline: 1rem;
     position: relative;
@@ -703,15 +713,6 @@ footer ul {
   .header-cta {
     display: none;
   }
-
-  .hero h1 {
-    font-size: var(--fs-xxl);
-  }
-
-  .hero-subtitle {
-    font-size: var(--fs-sm);
-  }
-
   .btn-primary {
     padding: var(--space-lg) var(--space-xl);
   }
@@ -719,25 +720,11 @@ footer ul {
   .product-grid {
     gap: var(--space-md);
   }
-
-  .card-content h3 {
-    font-size: var(--fs-md);
-  }
-
   .footer-grid {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-xl);
-  }
-  .heading:before {
-    display: none;
-  }
-  .heading {
-    font-size: var(--fs-xxl);
-  }
-  .tag {
-    font-size: var(--fs-xs);
   }
 }
 
@@ -746,22 +733,14 @@ footer ul {
     min-width: 60vw;
     scroll-snap-align: center;
   }
-
   .card img {
     height: 180px;
   }
-
   .card-content {
     padding: var(--space-md);
   }
-
   .card .desc {
     font-size: var(--fs-sm);
-  }
-
-  .buy-btn {
-    font-size: var(--fs-sm);
-    padding: var(--space-sm) var(--space-md);
   }
 }
 
@@ -787,4 +766,8 @@ html {
   background: var(--primary);
   border-radius: 9999px;
   border: 2px solid var(--bg-section);
+}
+#courses,
+#pdfs {
+  scroll-margin-top: 80px;
 }
