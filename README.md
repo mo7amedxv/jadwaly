@@ -1,2 +1,2 @@
-# Live Deme
+# Live Demo
 https://mo7amedxv.github.io/jadwaly/
