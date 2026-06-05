@@ -644,6 +644,7 @@ footer ul {
 }
 
 .footer-btn {
+  justify-self: unset;
   font-size: var(--fs-md);
   background-color: var(--primary);
 }
