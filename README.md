@@ -2,7 +2,7 @@
 
 <br/>
 
-<img src="https://mo7amedxv.github.io/jadwaly-shaima/imgs/logo.avif" alt="جدولي" height="80"/>
+<img src="https://mo7amedxv.github.io/jadwaly/imgs/logo.avif" alt="جدولي" height="80"/>
 
 <br/><br/>
 
