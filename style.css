@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'Readex Pro Arabic';
+  src: url('fonts/readex-pro-v27-arabic-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Readex Pro Arabic';
+  src: url('fonts/readex-pro-v27-arabic-500.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Readex Pro Arabic';
+  src: url('fonts/readex-pro-v27-arabic-600.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
 :root {
   --primary: #111111;
   --primary-hover: #c0185a;
