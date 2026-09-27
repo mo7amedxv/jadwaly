@@ -10,7 +10,7 @@
 
 ### طريقك الذكي لتنظيم حضانتك
 
-[![Website](https://img.shields.io/badge/🌐_الموقع_الرسمي-Visit-ff6b9d?style=for-the-badge&labelColor=1a1a2e)](https://mo7amedxv.github.io/jadwaly-shaima/)
+[![Website](https://img.shields.io/badge/🌐_الموقع_الرسمي-Visit-ff6b9d?style=for-the-badge&labelColor=1a1a2e)](https://mo7amedxv.github.io/jadwaly/)
 [![WhatsApp](https://img.shields.io/badge/واتساب-تواصل_معنا-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/201024165262)
 [![Facebook](https://img.shields.io/badge/فيسبوك-تابعنا-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/profile.php?id=61579392955780)
 
