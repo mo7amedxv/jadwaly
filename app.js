@@ -28,37 +28,37 @@ const pdfs = [
 ];
 const courses = [
   {
-    img: "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=80",
+    img: "imgs/course1.avif",
     name: "كورس إعداد معلمة اللغة العربية (نور البيان)",
     desc: "تأسيس القراءة والكتابة، الحركات والمدود، وأنشطة تطبيقية لتعليم الطفل خطوة بخطوة.",
     price: 600,
   },
   {
-    img: "https://images.unsplash.com/photo-1592431913823-7af6b323da9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWxwaGFiZXR8ZW58MHx8MHx8fDA%3D",
+    img: "imgs/course2.avif",
     name: "كورس إعداد معلمة اللغة الإنجليزية",
     desc: "Jolly Phonics، المنهج، لغة الفصل، وخطط دروس وأنشطة تفاعلية للأطفال.",
     price: 600,
   },
   {
-    img: "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=500&auto=format&fit=crop&q=80",
+    img: "imgs/course3.avif",
     name: "كورس إعداد معلمة رياضيات رياض الأطفال",
     desc: "تأسيس الأعداد، العمليات الحسابية، وألعاب تعليمية وأنشطة حسية ممتعة.",
     price: 600,
   },
   {
-    img: "https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/quran-memorization-centers1-AR201120251.jpg",
+    img: "imgs/course4.avif",
     name: "كورس معلمة القرآن الكريم والتربية الإسلامية",
     desc: "تحفيظ القرآن، السلوكيات الإسلامية، وقصص الأنبياء للأطفال بأسلوب مبسط.",
     price: 600,
   },
   {
-    img: "https://october-gardens.com/wp-content/uploads/2019/12/%D8%AD%D8%B6%D8%A7%D9%86%D9%87-aca.jpg",
+    img: "imgs/course5.avif",
     name: "كورس إدارة الحضانات والأكاديميات",
     desc: "إدارة الحضانة، الملفات، التسويق، التعامل مع الأهالي وتحسين الأداء الإداري.",
     price: 600,
   },
   {
-    img: "https://cdn-res.keymedia.com/cdn-cgi/image/f=auto/https://cdn-res.keymedia.com/cms/images/ca/126/0395_637756306103800235.jpg",
+    img: "imgs/course6.avif",
     name: "كورس إدارة الصف والمهارات المهنية للمعلمات",
     desc: "إدارة الفصل، ضبط السلوك، حل المشكلات والتواصل الفعال مع أولياء الأمور.",
     price: 400,
@@ -75,7 +75,7 @@ function renderCards(itemsArray, containerId, itemTypeLabel) {
     cardsHtml += `
       <div class="card">
       <div class="card-img-wrapper">
-        <img  loading="lazy" src="${item.img}" alt="${item.name}">
+        <img width="400" height="200" loading="lazy" src="${item.img}" alt="${item.name}">
         </div>
         <div class="card-content">
           <h3>${item.name}</h3>

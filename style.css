@@ -1,20 +1,20 @@
 @font-face {
-  font-family: 'Readex Pro Arabic';
-  src: url('fonts/readex-pro-v27-arabic-regular.woff2') format('woff2');
+  font-family: "Readex Pro Arabic";
+  src: url("fonts/readex-pro-v27-arabic-regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Readex Pro Arabic';
-  src: url('fonts/readex-pro-v27-arabic-500.woff2') format('woff2');
+  font-family: "Readex Pro Arabic";
+  src: url("fonts/readex-pro-v27-arabic-500.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Readex Pro Arabic';
-  src: url('fonts/readex-pro-v27-arabic-600.woff2') format('woff2');
+  font-family: "Readex Pro Arabic";
+  src: url("fonts/readex-pro-v27-arabic-600.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
 }
@@ -302,6 +302,9 @@ header ul {
   height: 100%;
   aspect-ratio: 4 / 3;
   display: block;
+}
+#courses-grid .card-img-wrapper img {
+  object-fit: cover;
 }
 .card-content h3 {
   font-weight: var(--fw-regular);
@@ -844,7 +847,9 @@ html {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .article-card:hover {
@@ -905,4 +910,4 @@ html {
   .articles-grid {
     grid-template-columns: 1fr;
   }
-} 
+}
