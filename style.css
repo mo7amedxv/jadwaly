@@ -117,7 +117,9 @@ header .logo {
 }
 
 header .logo img {
-  height: 100px;
+  height: 80px;
+  width: auto;
+  display: block;
 }
 
 header a:not(.logo, .header-cta):hover {
